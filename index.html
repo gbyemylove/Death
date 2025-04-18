@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DeathBot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url('https://r4.wallpaperflare.com/wallpaper/434/83/774/solo-leveling-jin-woo-hd-wallpaper-1806ad2870200c38208c717e5862c4fa.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      overflow-x: hidden;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 60px;
+      margin: 0;
+      opacity: 0;
+      transform: scale(2);
+      animation: openEffect 2s forwards;
+      text-shadow: 2px 2px 4px #000, -2px -2px 4px #000
+    }
+
+    @keyframes openEffect {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .content {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .content.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    p {
+      margin: 20px 0 40px;
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px #000, -2px -2px 4px #000;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      background-color: #00008B;
+      border: 2px solid #8c00f8;
+      width: 180px;
+      padding: 15px 0;
+      border-radius: 100px;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.3s;
+      box-shadow: 0px 11px 22px -9px #000000;
+      cursor: pointer;
+      text-align: center;
+      color: white;
+    }
+
+    .button:hover {
+      color: white;
+      background-color: #001bca;
+      border-color: #001bca;
+      transform: scale(1.1);
+      box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .grid-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .button {
+        width: 100%;
+      }
+
+      h3 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h3 id="title">DEATH BOT</h3>
+
+  <div class="content" id="main-content">
+    <p>Contact</p>
+
+    <div class="button-group">
+      <button class="button" onclick="location.href = 'https://www.facebook.com/pengunppp'">
+        <div class="grid-container">
+          <i class="fab fa-facebook"></i> Facebook
+        </div>
+      </button>
+
+      <button class="button" onclick="location.href = 'https://www.facebook.com/parysdasick'">
+        <div class="grid-container">
+          <i class="fab fa-facebook"></i> Supporter
+        </div>
+      </button>
+
+      <button class="button" onclick="location.href = 'https://discord.com/oauth2/authorize?client_id=1360595819207589914'">
+        <div class="grid-container">
+          <i class="fab fa-discord"></i> Discord Bot
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(() => {
+      document.getElementById("main-content").classList.add("show");
+    }, 1500);
+  </script>
+</body>
+
+</html>
